@@ -44,24 +44,67 @@ class ProductTests: XCTestCase {
         
         let decoder = JSONDecoder()
         
-        let product = try decoder.decode(Product.self, from: XCTUnwrap(mockData))
+        let product = try decoder.decode(Product.self, from: XCTUnwrap(mockProductData))
         
         XCTAssertEqual(product.id, 1)
         XCTAssertEqual(product.name, "Test Shirt")
         XCTAssertEqual(product.price, "£199")
         XCTAssertEqual(product.image, "https://media.endclothing.com/media/a-shirt.jpg")
     }
+    
+    func test_decodeObject_successfulDecodeProducts() throws {
+        
+        let decoder = JSONDecoder()
+        
+        let data = try decoder.decode(Products.self, from: XCTUnwrap(mockProductsData))
+        
+        XCTAssertEqual(data.title, "Exercise Listing")
+        XCTAssertEqual(data.count, 50)
+        
+        XCTAssertEqual(data.products[0].id, 1)
+        XCTAssertEqual(data.products[0].name, "Test Shirt")
+        XCTAssertEqual(data.products[0].price, "£199")
+        XCTAssertEqual(data.products[0].image, "https://media.endclothing.com/media/a-shirt.jpg")
+        
+        XCTAssertEqual(data.products[1].id, 1)
+        XCTAssertEqual(data.products[1].name, "Test Shirt")
+        XCTAssertEqual(data.products[1].price, "£199")
+        XCTAssertEqual(data.products[1].image, "https://media.endclothing.com/media/a-shirt.jpg")
+    }
 }
 
 extension ProductTests {
     
-    var mockData: Data? {
+    var mockProductData: Data? {
         """
         {
             "id": 1,
             "name": "Test Shirt",
             "price": "£199",
             "image": "https://media.endclothing.com/media/a-shirt.jpg"
+        }
+        """.data(using: .utf8)
+    }
+    
+    var mockProductsData: Data? {
+        """
+        {
+            "products": [
+                {
+                  "id": 1,
+                  "name": "Test Shirt",
+                  "price": "£199",
+                  "image": "https://media.endclothing.com/media/a-shirt.jpg"
+                },
+                {
+                  "id": 1,
+                  "name": "Test Shirt",
+                  "price": "£199",
+                  "image": "https://media.endclothing.com/media/a-shirt.jpg"
+                }
+            ],
+            "title": "Exercise Listing",
+            "product_count": 50
         }
         """.data(using: .utf8)
     }

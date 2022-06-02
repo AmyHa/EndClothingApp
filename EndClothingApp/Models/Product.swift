@@ -14,4 +14,15 @@ struct Product: Decodable {
 
 struct Products {
     var products: [Product]
+    var title: String
+    var count: Int
+}
+
+extension Products : Decodable {
+    
+    private enum CodingKeys: String, CodingKey {
+        case products
+        case title
+        case count = "product_count"
+    }
 }
