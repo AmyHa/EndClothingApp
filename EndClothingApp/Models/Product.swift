@@ -5,7 +5,7 @@
 //  Created by Amy Ha on 02/06/2022.
 //
 
-struct Product {
+struct Product: Decodable {
     var id: Int
     var name: String
     var price: String

@@ -39,4 +39,30 @@ class ProductTests: XCTestCase {
         
         XCTAssertEqual(product.image, "https://media.endclothing.com/media/a-shirt.jpg")
     }
+    
+    func test_decodeObject_successfulDecodeOneProduct() throws {
+        
+        let decoder = JSONDecoder()
+        
+        let product = try decoder.decode(Product.self, from: XCTUnwrap(mockData))
+        
+        XCTAssertEqual(product.id, 1)
+        XCTAssertEqual(product.name, "Test Shirt")
+        XCTAssertEqual(product.price, "£199")
+        XCTAssertEqual(product.image, "https://media.endclothing.com/media/a-shirt.jpg")
+    }
+}
+
+extension ProductTests {
+    
+    var mockData: Data? {
+        """
+        {
+            "id": 1,
+            "name": "Test Shirt",
+            "price": "£199",
+            "image": "https://media.endclothing.com/media/a-shirt.jpg"
+        }
+        """.data(using: .utf8)
+    }
 }
