@@ -17,25 +17,25 @@ class ProductTests: XCTestCase {
     }
 
     func test_init_setsID() {
-        let product = Product(id: 1, name: "", price: "", image: "")
+        let product = Product(id: "1", name: "", price: "", image: "")
         
-        XCTAssertEqual(product.id, 1)
+        XCTAssertEqual(product.id, "1")
     }
     
     func test_init_setsName() {
-        let product = Product(id: 1, name: "Test Shirt", price: "", image: "")
+        let product = Product(id: "1", name: "Test Shirt", price: "", image: "")
         
         XCTAssertEqual(product.name, "Test Shirt")
     }
     
     func test_init_setsPrice() {
-        let product = Product(id: 1, name: "", price: "£199", image: "")
+        let product = Product(id: "1", name: "", price: "£199", image: "")
         
         XCTAssertEqual(product.price, "£199")
     }
     
     func test_init_setsImage() {
-        let product = Product(id: 1, name: "", price: "", image: "https://media.endclothing.com/media/a-shirt.jpg")
+        let product = Product(id: "1", name: "", price: "", image: "https://media.endclothing.com/media/a-shirt.jpg")
         
         XCTAssertEqual(product.image, "https://media.endclothing.com/media/a-shirt.jpg")
     }
@@ -46,7 +46,7 @@ class ProductTests: XCTestCase {
         
         let product = try decoder.decode(Product.self, from: XCTUnwrap(mockProductData))
         
-        XCTAssertEqual(product.id, 1)
+        XCTAssertEqual(product.id, "1")
         XCTAssertEqual(product.name, "Test Shirt")
         XCTAssertEqual(product.price, "£199")
         XCTAssertEqual(product.image, "https://media.endclothing.com/media/a-shirt.jpg")
@@ -61,12 +61,12 @@ class ProductTests: XCTestCase {
         XCTAssertEqual(data.title, "Exercise Listing")
         XCTAssertEqual(data.count, 50)
         
-        XCTAssertEqual(data.products[0].id, 1)
+        XCTAssertEqual(data.products[0].id, "1")
         XCTAssertEqual(data.products[0].name, "Test Shirt")
         XCTAssertEqual(data.products[0].price, "£199")
         XCTAssertEqual(data.products[0].image, "https://media.endclothing.com/media/a-shirt.jpg")
         
-        XCTAssertEqual(data.products[1].id, 1)
+        XCTAssertEqual(data.products[1].id, "1")
         XCTAssertEqual(data.products[1].name, "Test Shirt")
         XCTAssertEqual(data.products[1].price, "£199")
         XCTAssertEqual(data.products[1].image, "https://media.endclothing.com/media/a-shirt.jpg")
