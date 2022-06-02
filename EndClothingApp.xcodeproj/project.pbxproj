@@ -15,6 +15,8 @@
 		62014B1C2848ABCC008B0ECE /* EndClothingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B1B2848ABCC008B0ECE /* EndClothingAppUITestsLaunchTests.swift */; };
 		62014B2A2848B301008B0ECE /* ProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B292848B301008B0ECE /* ProductTests.swift */; };
 		62014B2D2848B418008B0ECE /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B2C2848B418008B0ECE /* Product.swift */; };
+		62014B302848C1AE008B0ECE /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B2F2848C1AE008B0ECE /* NetworkServiceTests.swift */; };
+		62014B352848C27F008B0ECE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B342848C27F008B0ECE /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		62014B1B2848ABCC008B0ECE /* EndClothingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndClothingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		62014B292848B301008B0ECE /* ProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTests.swift; sourceTree = "<group>"; };
 		62014B2C2848B418008B0ECE /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		62014B2F2848C1AE008B0ECE /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		62014B342848C27F008B0ECE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		62014AF72848ABCB008B0ECE /* EndClothingApp */ = {
 			isa = PBXGroup;
 			children = (
+				62014B312848C262008B0ECE /* Services */,
 				62014B2B2848B3F3008B0ECE /* Models */,
 				62014AF82848ABCB008B0ECE /* AppDelegate.swift */,
 				62014AFA2848ABCB008B0ECE /* SceneDelegate.swift */,
@@ -110,6 +115,7 @@
 		62014B0E2848ABCC008B0ECE /* EndClothingAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				62014B2E2848C193008B0ECE /* Services */,
 				62014B282848B2ED008B0ECE /* Models */,
 			);
 			path = EndClothingAppTests;
@@ -138,6 +144,22 @@
 				62014B2C2848B418008B0ECE /* Product.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		62014B2E2848C193008B0ECE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				62014B2F2848C1AE008B0ECE /* NetworkServiceTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		62014B312848C262008B0ECE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				62014B342848C27F008B0ECE /* NetworkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62014B352848C27F008B0ECE /* NetworkService.swift in Sources */,
 				62014AFD2848ABCB008B0ECE /* ViewController.swift in Sources */,
 				62014B2D2848B418008B0ECE /* Product.swift in Sources */,
 				62014AF92848ABCB008B0ECE /* AppDelegate.swift in Sources */,
@@ -281,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62014B302848C1AE008B0ECE /* NetworkServiceTests.swift in Sources */,
 				62014B2A2848B301008B0ECE /* ProductTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
