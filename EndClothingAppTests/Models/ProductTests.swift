@@ -78,7 +78,7 @@ extension ProductTests {
     var mockProductData: Data? {
         """
         {
-            "id": 1,
+            "id": "1",
             "name": "Test Shirt",
             "price": "£199",
             "image": "https://media.endclothing.com/media/a-shirt.jpg"
@@ -91,13 +91,13 @@ extension ProductTests {
         {
             "products": [
                 {
-                  "id": 1,
+                  "id": "1",
                   "name": "Test Shirt",
                   "price": "£199",
                   "image": "https://media.endclothing.com/media/a-shirt.jpg"
                 },
                 {
-                  "id": 1,
+                  "id": "1",
                   "name": "Test Shirt",
                   "price": "£199",
                   "image": "https://media.endclothing.com/media/a-shirt.jpg"

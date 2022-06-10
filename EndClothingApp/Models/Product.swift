@@ -5,20 +5,21 @@
 //  Created by Amy Ha on 02/06/2022.
 //
 
-struct Product: Decodable {
+struct Product: Codable, Equatable {
     var id: String
     var name: String
     var price: String
     var image: String
 }
 
-struct Products {
+struct Products: Equatable {
+    
     var products: [Product]
     var title: String
     var count: Int
 }
 
-extension Products : Decodable {
+extension Products : Codable {
     
     private enum CodingKeys: String, CodingKey {
         case products
