@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		62014AF92848ABCB008B0ECE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014AF82848ABCB008B0ECE /* AppDelegate.swift */; };
 		62014AFB2848ABCB008B0ECE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014AFA2848ABCB008B0ECE /* SceneDelegate.swift */; };
-		62014AFD2848ABCB008B0ECE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014AFC2848ABCB008B0ECE /* ViewController.swift */; };
 		62014B022848ABCC008B0ECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62014B012848ABCC008B0ECE /* Assets.xcassets */; };
 		62014B1A2848ABCC008B0ECE /* EndClothingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B192848ABCC008B0ECE /* EndClothingAppUITests.swift */; };
 		62014B1C2848ABCC008B0ECE /* EndClothingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B1B2848ABCC008B0ECE /* EndClothingAppUITestsLaunchTests.swift */; };
@@ -22,6 +21,7 @@
 		62014B3D2849015E008B0ECE /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B3B2849015A008B0ECE /* ProductListViewModel.swift */; };
 		62014B3E28490227008B0ECE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B342848C27F008B0ECE /* NetworkService.swift */; };
 		62014B3F28490233008B0ECE /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B2C2848B418008B0ECE /* Product.swift */; };
+		62014B4228533E3C008B0ECE /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B4128533E3C008B0ECE /* ProductListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 		62014AF52848ABCB008B0ECE /* EndClothingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EndClothingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62014AF82848ABCB008B0ECE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62014AFA2848ABCB008B0ECE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		62014AFC2848ABCB008B0ECE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		62014B012848ABCC008B0ECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62014B062848ABCC008B0ECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62014B0B2848ABCC008B0ECE /* EndClothingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EndClothingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +57,7 @@
 		62014B342848C27F008B0ECE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		62014B382848FDCE008B0ECE /* ProductListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModelTests.swift; sourceTree = "<group>"; };
 		62014B3B2849015A008B0ECE /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		62014B4128533E3C008B0ECE /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,12 +108,12 @@
 		62014AF72848ABCB008B0ECE /* EndClothingApp */ = {
 			isa = PBXGroup;
 			children = (
+				62014B4028533E04008B0ECE /* ViewControllers */,
 				62014B362848FCDF008B0ECE /* ViewModels */,
 				62014B312848C262008B0ECE /* Services */,
 				62014B2B2848B3F3008B0ECE /* Models */,
 				62014AF82848ABCB008B0ECE /* AppDelegate.swift */,
 				62014AFA2848ABCB008B0ECE /* SceneDelegate.swift */,
-				62014AFC2848ABCB008B0ECE /* ViewController.swift */,
 				62014B012848ABCC008B0ECE /* Assets.xcassets */,
 				62014B062848ABCC008B0ECE /* Info.plist */,
 			);
@@ -185,6 +185,14 @@
 				62014B382848FDCE008B0ECE /* ProductListViewModelTests.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		62014B4028533E04008B0ECE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				62014B4128533E3C008B0ECE /* ProductListViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,7 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62014B352848C27F008B0ECE /* NetworkService.swift in Sources */,
-				62014AFD2848ABCB008B0ECE /* ViewController.swift in Sources */,
+				62014B4228533E3C008B0ECE /* ProductListViewController.swift in Sources */,
 				62014B3C2849015A008B0ECE /* ProductListViewModel.swift in Sources */,
 				62014B2D2848B418008B0ECE /* Product.swift in Sources */,
 				62014AF92848ABCB008B0ECE /* AppDelegate.swift in Sources */,
