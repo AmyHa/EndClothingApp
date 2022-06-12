@@ -24,14 +24,13 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "house")
-        imageView.backgroundColor = .orange
+        imageView.image = UIImage(named: "placeholderImage")
         return imageView
     }()
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "This is a super super long long long long Product Title"
+        label.text = "Product Title"
         label.textAlignment = .center
         label.numberOfLines = 0
         label.textColor = .black
@@ -70,9 +69,11 @@ class ProductCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let titleLabelHeight = heightForView(text: titleLabel.text ?? "", width: contentView.frame.size.width)
-        priceLabel.frame = CGRect(x: 5, y: contentView.frame.size.height-20, width: contentView.frame.size.width-10, height: 20)
-        colourLabel.frame = CGRect(x: 5, y: contentView.frame.size.height-40, width: contentView.frame.size.width-10, height: 20)
-        titleLabel.frame = CGRect(x: 5, y: contentView.frame.size.height-40-titleLabelHeight, width: contentView.frame.size.width-10, height: titleLabelHeight)
+        let titleLabelHeight = heightForView(text: titleLabel.text ?? "", width: contentView.frame.size.width-16)
+        let imageViewHeight = contentView.frame.size.height*(2/3)
+        imageView.frame = CGRect(x: 8, y: 0, width: contentView.frame.size.width-16, height: imageViewHeight)
+        titleLabel.frame = CGRect(x: 8, y: imageViewHeight, width: contentView.frame.size.width-16, height: titleLabelHeight)
+        priceLabel.frame = CGRect(x: 8, y: imageViewHeight + titleLabelHeight, width: contentView.frame.size.width-16, height: 20)
+        colourLabel.frame = CGRect(x: 8, y: imageViewHeight + titleLabelHeight + 20, width: contentView.frame.size.width-16, height: 20)
     }
 }
