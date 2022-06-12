@@ -39,7 +39,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
             .sink(receiveValue: { (result) in
                 self.count = result
                 DispatchQueue.main.async {
-                    self.countLabel.text = "\(self.count ?? 0) items"
+                    self.countLabel.text = "\(self.count ?? 0) Items"
                 }
             })
             .store(in: &cancellables)
