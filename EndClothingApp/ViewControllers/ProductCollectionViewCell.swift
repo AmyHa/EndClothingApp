@@ -21,13 +21,13 @@ class ProductCollectionViewCell: UICollectionViewCell {
        return label.frame.height
    }
     
-    private let imageView: UIImageView = {
+    let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "placeholderImage")
         return imageView
     }()
     
-    private let titleLabel: UILabel = {
+    let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Product Title"
         label.textAlignment = .center
@@ -36,7 +36,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    private let colourLabel: UILabel = {
+    let colourLabel: UILabel = {
         let label = UILabel()
         label.text = "Colour"
         label.textAlignment = .center
@@ -44,7 +44,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    private let priceLabel: UILabel = {
+    let priceLabel: UILabel = {
         let label = UILabel()
         label.text = "£X"
         label.textAlignment = .center
