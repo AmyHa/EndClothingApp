@@ -14,6 +14,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = .white
         setUpUI()
     }
     
@@ -27,8 +28,8 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
         collectionView.delegate = self
         view.addSubview(collectionView)
         collectionView.frame = view.bounds
-        
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = .white
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
