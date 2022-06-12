@@ -94,6 +94,9 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
                 print("Error downloading image: \(error)")
             }
         }
+        cell.titleLabel.text = products[indexPath.row].name
+        cell.priceLabel.text = products[indexPath.row].price
+        cell.colourLabel.text = "Yellow"
         return cell
     }
     
