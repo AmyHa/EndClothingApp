@@ -72,7 +72,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         let imageViewHeight = contentView.frame.size.height*(2/3)
         imageView.frame = CGRect(x: 8, y: 0, width: contentView.frame.size.width-16, height: imageViewHeight)
         titleLabel.frame = CGRect(x: 8, y: imageViewHeight, width: contentView.frame.size.width-16, height: titleLabelHeight)
-        priceLabel.frame = CGRect(x: 8, y: imageViewHeight + titleLabelHeight, width: contentView.frame.size.width-16, height: 20)
-        colourLabel.frame = CGRect(x: 8, y: imageViewHeight + titleLabelHeight + 20, width: contentView.frame.size.width-16, height: 20)
+        colourLabel.frame = CGRect(x: 8, y: imageViewHeight + titleLabelHeight, width: contentView.frame.size.width-16, height: 20)
+        priceLabel.frame = CGRect(x: 8, y: imageViewHeight + titleLabelHeight + 20, width: contentView.frame.size.width-16, height: 20)
     }
 }
