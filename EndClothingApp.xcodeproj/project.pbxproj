@@ -22,6 +22,7 @@
 		62014B3E28490227008B0ECE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B342848C27F008B0ECE /* NetworkService.swift */; };
 		62014B3F28490233008B0ECE /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B2C2848B418008B0ECE /* Product.swift */; };
 		62014B4228533E3C008B0ECE /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B4128533E3C008B0ECE /* ProductListViewController.swift */; };
+		62014B802855E00C008B0ECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62014B7F2855E00C008B0ECE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		62014B382848FDCE008B0ECE /* ProductListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModelTests.swift; sourceTree = "<group>"; };
 		62014B3B2849015A008B0ECE /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		62014B4128533E3C008B0ECE /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		62014B7F2855E00C008B0ECE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				62014AFA2848ABCB008B0ECE /* SceneDelegate.swift */,
 				62014B012848ABCC008B0ECE /* Assets.xcassets */,
 				62014B062848ABCC008B0ECE /* Info.plist */,
+				62014B7F2855E00C008B0ECE /* LaunchScreen.storyboard */,
 			);
 			path = EndClothingApp;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62014B802855E00C008B0ECE /* LaunchScreen.storyboard in Resources */,
 				62014B022848ABCC008B0ECE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
