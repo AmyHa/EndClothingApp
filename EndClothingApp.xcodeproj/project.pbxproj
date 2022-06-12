@@ -23,6 +23,7 @@
 		62014B3F28490233008B0ECE /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B2C2848B418008B0ECE /* Product.swift */; };
 		62014B4228533E3C008B0ECE /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B4128533E3C008B0ECE /* ProductListViewController.swift */; };
 		62014B802855E00C008B0ECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62014B7F2855E00C008B0ECE /* LaunchScreen.storyboard */; };
+		62014B822855E6CB008B0ECE /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B812855E6CB008B0ECE /* ProductCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		62014B3B2849015A008B0ECE /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		62014B4128533E3C008B0ECE /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		62014B7F2855E00C008B0ECE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		62014B812855E6CB008B0ECE /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				62014B4128533E3C008B0ECE /* ProductListViewController.swift */,
+				62014B812855E6CB008B0ECE /* ProductCollectionViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			files = (
 				62014B352848C27F008B0ECE /* NetworkService.swift in Sources */,
 				62014B4228533E3C008B0ECE /* ProductListViewController.swift in Sources */,
+				62014B822855E6CB008B0ECE /* ProductCollectionViewCell.swift in Sources */,
 				62014B3C2849015A008B0ECE /* ProductListViewModel.swift in Sources */,
 				62014B2D2848B418008B0ECE /* Product.swift in Sources */,
 				62014AF92848ABCB008B0ECE /* AppDelegate.swift in Sources */,

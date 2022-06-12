@@ -11,6 +11,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     
     var collectionView: UICollectionView?
     let numberOfCols = 2
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,7 +24,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
         layout.scrollDirection = .vertical
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         guard let collectionView = collectionView else { return }
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "ProductCell")
+        collectionView.register(ProductCollectionViewCell.self, forCellWithReuseIdentifier: ProductCollectionViewCell.identifier)
         collectionView.dataSource = self
         collectionView.delegate = self
         view.addSubview(collectionView)
@@ -39,8 +40,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     }
      
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath)
-        cell.contentView.backgroundColor = .orange
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.identifier, for: indexPath)
         return cell
     }
     
