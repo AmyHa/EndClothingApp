@@ -9,7 +9,10 @@ import UIKit
 
 class ProductListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    var collectionView: UICollectionView?
+    var collectionView: UICollectionView!
+    var numberOfItemsLabel = UILabel()
+    var numberOfItems: Int?
+    
     let numberOfCols = 2
     
     override func viewDidLoad() {
@@ -20,6 +23,26 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     private func setUpUI() {
+        
+        setUpNumberOfItemsLabel()
+        setUpCollectionView()
+    }
+     
+    private func setUpNumberOfItemsLabel() {
+        numberOfItemsLabel.text = numberOfItems != nil ? "\(numberOfItems) items" : "Items"
+        numberOfItemsLabel.textColor = .black
+        numberOfItemsLabel.textAlignment = .center
+        
+        view.addSubview(numberOfItemsLabel)
+        numberOfItemsLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            numberOfItemsLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            numberOfItemsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            numberOfItemsLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+    }
+    
+    private func setUpCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -32,13 +55,13 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .white
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            collectionView.topAnchor.constraint(equalTo: numberOfItemsLabel.bottomAnchor, constant: 10),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
-     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.identifier, for: indexPath)
         return cell
