@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import Combine
 
 class ProductListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    var collectionView: UICollectionView!
-    var numberOfItemsLabel = UILabel()
-    var numberOfItems: Int?
+    private var viewModel = ProductListViewModel()
+    private var products = [Product]()
+    private var collectionView: UICollectionView!
+    private var countLabel = UILabel()
+    private var count: Int?
+    private var cancellables: Set<AnyCancellable> = []
     
     let numberOfCols = 2
     
@@ -20,6 +24,24 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
 
         view.backgroundColor = .white
         setUpUI()
+        
+        viewModel.$products
+            .sink(receiveValue: { (result) in
+                self.products = result
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            })
+            .store(in: &cancellables)
+        
+        viewModel.$count
+            .sink(receiveValue: { (result) in
+                self.count = result
+                DispatchQueue.main.async {
+                    self.countLabel.text = "\(self.count ?? 0) items"
+                }
+            })
+            .store(in: &cancellables)
     }
     
     private func setUpUI() {
@@ -29,16 +51,16 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     }
      
     private func setUpNumberOfItemsLabel() {
-        numberOfItemsLabel.text = numberOfItems != nil ? "\(numberOfItems) items" : "Items"
-        numberOfItemsLabel.textColor = .black
-        numberOfItemsLabel.textAlignment = .center
+        countLabel.text = "\(count ?? 0) items"
+        countLabel.textColor = .black
+        countLabel.textAlignment = .center
         
-        view.addSubview(numberOfItemsLabel)
-        numberOfItemsLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(countLabel)
+        countLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            numberOfItemsLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            numberOfItemsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            numberOfItemsLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            countLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            countLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            countLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
     
@@ -55,7 +77,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .white
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: numberOfItemsLabel.bottomAnchor, constant: 10),
+            collectionView.topAnchor.constraint(equalTo: countLabel.bottomAnchor, constant: 10),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
@@ -68,7 +90,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return products.count
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
