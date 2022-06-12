@@ -1,0 +1,6 @@
+framework module Pods_EndClothingApp_EndClothingAppUITests {
+  umbrella header "Pods-EndClothingApp-EndClothingAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
