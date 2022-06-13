@@ -12,6 +12,7 @@ class DetailViewController: UIViewController {
     var addToCartButton = UIButton()
     var colourLabel = UILabel()
     var priceLabel = UILabel()
+    var imageView = UIImageView()
     
     var product: Product?
     
@@ -37,6 +38,7 @@ class DetailViewController: UIViewController {
         setUpAddToCartButton()
         setUpColourLabel()
         setUpPriceLabel()
+        setUpProductImage()
     }
     
     private func setUpAddToCartButton() {
@@ -75,6 +77,31 @@ class DetailViewController: UIViewController {
             priceLabel.topAnchor.constraint(equalTo: colourLabel.bottomAnchor),
             priceLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             priceLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+    }
+    
+    private func setUpProductImage() {
+        view.addSubview(imageView)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = UIImage(systemName: "house")
+        imageView.contentMode = .scaleAspectFit
+        
+        if let url = product?.image {
+            let imageURL = URL(string: url)
+            
+            imageView.sd_setImage(with: imageURL) { image, error, cacheType, downloadURL in
+                if let error = error {
+                    print("Error downloading image: \(error)")
+                }
+            }
+        }
+        
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: 20),
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            imageView.heightAnchor.constraint(equalToConstant: view.frame.size.height*(1/3))
+            
         ])
     }
 }
