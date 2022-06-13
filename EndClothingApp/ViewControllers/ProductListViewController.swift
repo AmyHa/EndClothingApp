@@ -116,7 +116,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     func onTapProduct(product: Product) {
-        let detailViewController = DetailViewController()
+        let detailViewController = DetailViewController(product: product)
         self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
