@@ -47,12 +47,11 @@ class DetailViewController: UIViewController {
         addToCartButton.setTitleColor(.white, for: .normal)
         addToCartButton.backgroundColor = .black
         view.addSubview(addToCartButton)
-        addToCartButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            addToCartButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
-            addToCartButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            addToCartButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10)
-        ])
+        addToCartButton.snp.makeConstraints { make in
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-20)
+            make.left.equalTo(view).offset(10)
+            make.right.equalTo(view).offset(-10)
+        }
     }
     
     private func setUpColourLabel() {
@@ -60,29 +59,26 @@ class DetailViewController: UIViewController {
         colourLabel.textAlignment = .center
         colourLabel.textColor = .gray
         view.addSubview(colourLabel)
-        colourLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            colourLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            colourLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            colourLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
+        colourLabel.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.left.equalTo(view)
+            make.right.equalTo(view)
+        }
     }
     
     private func setUpPriceLabel() {
         priceLabel.text = product?.price
         priceLabel.textAlignment = .center
         view.addSubview(priceLabel)
-        priceLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            priceLabel.topAnchor.constraint(equalTo: colourLabel.bottomAnchor),
-            priceLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            priceLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
+        priceLabel.snp.makeConstraints { make in
+            make.top.equalTo(colourLabel.snp.bottom)
+            make.left.equalTo(view)
+            make.right.equalTo(view)
+        }
     }
     
     private func setUpProductImage() {
         view.addSubview(imageView)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(systemName: "house")
         imageView.contentMode = .scaleAspectFit
         
@@ -96,11 +92,11 @@ class DetailViewController: UIViewController {
             }
         }
         
-        NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: 20),
-            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            imageView.heightAnchor.constraint(equalToConstant: view.frame.size.height*(1/3))
-        ])
+        imageView.snp.makeConstraints { make in
+            make.top.equalTo(priceLabel.snp.bottom).offset(20)
+            make.left.equalTo(view).offset(10)
+            make.right.equalTo(view).offset(-10)
+            make.height.equalTo(view.snp.height).dividedBy(3)
+        }
     }
 }
