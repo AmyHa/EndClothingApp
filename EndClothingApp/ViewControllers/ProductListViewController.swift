@@ -22,7 +22,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.backgroundColor = .white
         setUpUI()
         
@@ -46,11 +46,10 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     private func setUpUI() {
-        
         setUpNumberOfItemsLabel()
         setUpCollectionView()
     }
-     
+    
     private func setUpNumberOfItemsLabel() {
         countLabel.text = "\(count ?? 0) items"
         countLabel.textColor = .black
@@ -78,7 +77,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .white
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: countLabel.bottomAnchor, constant: 10),
+            collectionView.topAnchor.constraint(equalTo: countLabel.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
