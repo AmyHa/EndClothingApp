@@ -31,6 +31,7 @@
 		62943AC2285722C600531E26 /* OpenSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62943AC1285722C600531E26 /* OpenSans-Medium.ttf */; };
 		62943AC42857252A00531E26 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943AC32857252A00531E26 /* DetailViewController.swift */; };
 		62943AC828579E6D00531E26 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943AC728579E6D00531E26 /* UIButtonExtension.swift */; };
+		62943ACB2857A35300531E26 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943ACA2857A35300531E26 /* Constants.swift */; };
 		DF0D7C9C3A47E626815B94D1 /* Pods_EndClothingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2904D21FD26C4EC9824F1AB0 /* Pods_EndClothingAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		62943AC1285722C600531E26 /* OpenSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Medium.ttf"; sourceTree = "<group>"; };
 		62943AC32857252A00531E26 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		62943AC728579E6D00531E26 /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		62943ACA2857A35300531E26 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		64DD9882C87C0F615C5A90A4 /* Pods-EndClothingApp-EndClothingAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndClothingApp-EndClothingAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-EndClothingApp-EndClothingAppUITests/Pods-EndClothingApp-EndClothingAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		898124DE97090828406008C7 /* Pods-EndClothingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndClothingAppTests.debug.xcconfig"; path = "Target Support Files/Pods-EndClothingAppTests/Pods-EndClothingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9A57E70C767256C6F202398D /* Pods-EndClothingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndClothingApp.release.xcconfig"; path = "Target Support Files/Pods-EndClothingApp/Pods-EndClothingApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		62014AF72848ABCB008B0ECE /* EndClothingApp */ = {
 			isa = PBXGroup;
 			children = (
+				62943AC92857A34900531E26 /* Helpers */,
 				62943AB628571CB100531E26 /* Style */,
 				62014B4028533E04008B0ECE /* ViewControllers */,
 				62014B362848FCDF008B0ECE /* ViewModels */,
@@ -278,6 +281,14 @@
 				62943AC728579E6D00531E26 /* UIButtonExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		62943AC92857A34900531E26 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				62943ACA2857A35300531E26 /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -527,6 +538,7 @@
 				62014B822855E6CB008B0ECE /* ProductCollectionViewCell.swift in Sources */,
 				62014B3C2849015A008B0ECE /* ProductListViewModel.swift in Sources */,
 				62014B2D2848B418008B0ECE /* Product.swift in Sources */,
+				62943ACB2857A35300531E26 /* Constants.swift in Sources */,
 				62943AC828579E6D00531E26 /* UIButtonExtension.swift in Sources */,
 				62014AF92848ABCB008B0ECE /* AppDelegate.swift in Sources */,
 				62014AFB2848ABCB008B0ECE /* SceneDelegate.swift in Sources */,

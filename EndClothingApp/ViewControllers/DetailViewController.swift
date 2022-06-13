@@ -42,7 +42,7 @@ class DetailViewController: UIViewController {
     }
     
     private func setUpAddToCartButton() {
-        addToCartButton.setTitle("ADD TO CART", for: .normal)
+        addToCartButton.setTitle(Constants.AddToCart, for: .normal)
         addToCartButton.titleLabelFont = UIFont(name: "OpenSans-Bold", size: 15)
         addToCartButton.setTitleColor(.white, for: .normal)
         addToCartButton.backgroundColor = .black
@@ -101,7 +101,6 @@ class DetailViewController: UIViewController {
             imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             imageView.heightAnchor.constraint(equalToConstant: view.frame.size.height*(1/3))
-            
         ])
     }
 }
