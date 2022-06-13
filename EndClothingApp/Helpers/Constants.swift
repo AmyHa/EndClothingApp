@@ -6,5 +6,11 @@
 //
 
 struct Constants {
-    static let AddToCart  = "ADD TO CART"
+    static let addToCart  = "ADD TO CART"
+    
+    struct Font {
+        static let openSansRegular = "OpenSans-Regular"
+        static let openSansBold = "OpenSans-Bold"
+        static let openSansMedium = "OpenSans-Medium"
+    }
 }

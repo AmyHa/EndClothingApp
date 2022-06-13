@@ -43,7 +43,7 @@ class DetailViewController: UIViewController {
     
     private func setUpAddToCartButton() {
         addToCartButton.setTitle(Constants.AddToCart, for: .normal)
-        addToCartButton.titleLabelFont = UIFont(name: "OpenSans-Bold", size: 15)
+        addToCartButton.titleLabelFont = UIFont(name: Constants.Font.openSansBold, size: 15)
         addToCartButton.setTitleColor(.white, for: .normal)
         addToCartButton.backgroundColor = .black
         view.addSubview(addToCartButton)

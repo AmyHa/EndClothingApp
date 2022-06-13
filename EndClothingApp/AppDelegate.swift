@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        UILabel.appearance().font = UIFont(name: "OpenSans-Medium", size: 15)
+        UILabel.appearance().font = UIFont(name: Constants.Font.openSansMedium, size: 15)
 
         return true
     }
