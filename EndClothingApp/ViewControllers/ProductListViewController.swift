@@ -12,6 +12,7 @@ import SnapKit
 
 class ProductListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    var coordinator: MainCoordinator?
     private var viewModel = ProductListViewModel()
     private var products = [Product]()
     private var collectionView: UICollectionView!
@@ -116,7 +117,6 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     func onTapProduct(product: Product) {
-        let detailViewController = DetailViewController(product: product)
-        self.navigationController?.pushViewController(detailViewController, animated: true)
+        coordinator?.moveToDetailViewController(of: product)
     }
 }

@@ -11,16 +11,18 @@ class MainCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var tabBarController: UITabBarController
     
+    let searchVewController = ProductListViewController()
+    let savedViewController = ProductListViewController()
+    let productListViewController = ProductListViewController()
+    let accountViewController = ProductListViewController()
+    let bagViewController = ProductListViewController()
+    
     init(tabBarController: UITabBarController) {
         self.tabBarController = tabBarController
     }
     
     func start() {
-        let searchVewController = ProductListViewController()
-        let savedViewController = ProductListViewController()
-        let productListViewController = ProductListViewController()
-        let accountViewController = ProductListViewController()
-        let bagViewController = ProductListViewController()
+        productListViewController.coordinator = self
         
         let searchItem = UITabBarItem(title: "", image: UIImage(systemName: "doc.text.magnifyingglass"), selectedImage: UIImage(systemName: "doc.text.magnifyingglass")?.withRenderingMode(.alwaysOriginal))
         
@@ -41,5 +43,10 @@ class MainCoordinator: Coordinator {
         let controllers = [searchVewController, savedViewController, productListViewController, accountViewController, bagViewController]
         tabBarController.viewControllers = controllers.map { UINavigationController(rootViewController: $0)}
         tabBarController.selectedIndex = 2
+    }
+    
+    func moveToDetailViewController(of product: Product) {
+        let detailViewController = DetailViewController(product: product)
+        productListViewController.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
