@@ -29,6 +29,7 @@
 		62943AB928571D0A00531E26 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62943AB828571D0A00531E26 /* OpenSans-Regular.ttf */; };
 		62943ABB28571D1400531E26 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62943ABA28571D1400531E26 /* OpenSans-Bold.ttf */; };
 		62943AC2285722C600531E26 /* OpenSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62943AC1285722C600531E26 /* OpenSans-Medium.ttf */; };
+		62943AC42857252A00531E26 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943AC32857252A00531E26 /* DetailViewController.swift */; };
 		DF0D7C9C3A47E626815B94D1 /* Pods_EndClothingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2904D21FD26C4EC9824F1AB0 /* Pods_EndClothingAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		62943AB828571D0A00531E26 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		62943ABA28571D1400531E26 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		62943AC1285722C600531E26 /* OpenSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Medium.ttf"; sourceTree = "<group>"; };
+		62943AC32857252A00531E26 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		64DD9882C87C0F615C5A90A4 /* Pods-EndClothingApp-EndClothingAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndClothingApp-EndClothingAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-EndClothingApp-EndClothingAppUITests/Pods-EndClothingApp-EndClothingAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		898124DE97090828406008C7 /* Pods-EndClothingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndClothingAppTests.debug.xcconfig"; path = "Target Support Files/Pods-EndClothingAppTests/Pods-EndClothingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9A57E70C767256C6F202398D /* Pods-EndClothingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndClothingApp.release.xcconfig"; path = "Target Support Files/Pods-EndClothingApp/Pods-EndClothingApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			children = (
 				62014B4128533E3C008B0ECE /* ProductListViewController.swift */,
 				62014B812855E6CB008B0ECE /* ProductCollectionViewCell.swift */,
+				62943AC32857252A00531E26 /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				62014B2D2848B418008B0ECE /* Product.swift in Sources */,
 				62014AF92848ABCB008B0ECE /* AppDelegate.swift in Sources */,
 				62014AFB2848ABCB008B0ECE /* SceneDelegate.swift in Sources */,
+				62943AC42857252A00531E26 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

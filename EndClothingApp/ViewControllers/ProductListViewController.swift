@@ -110,4 +110,13 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
         let widthPerItem = availableWidth / CGFloat(numberOfCols)
         return CGSize(width:  widthPerItem, height: collectionView.frame.size.height / 2)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        onTapProduct(product: products[indexPath.row])
+    }
+    
+    func onTapProduct(product: Product) {
+        let detailViewController = DetailViewController()
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
 }
