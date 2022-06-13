@@ -16,7 +16,6 @@ class ProductCollectionViewCell: UICollectionViewCell {
        label.numberOfLines = 0
        label.lineBreakMode = NSLineBreakMode.byWordWrapping
        label.text = text
-
        label.sizeToFit()
        return label.frame.height
    }

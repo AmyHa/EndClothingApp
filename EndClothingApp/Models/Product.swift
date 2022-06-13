@@ -13,7 +13,6 @@ struct Product: Codable, Equatable {
 }
 
 struct Products: Equatable {
-    
     var products: [Product]
     var title: String
     var count: Int

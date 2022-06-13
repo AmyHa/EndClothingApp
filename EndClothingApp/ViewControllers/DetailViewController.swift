@@ -29,7 +29,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        
         setUpUI()
     }
     
@@ -79,7 +78,6 @@ class DetailViewController: UIViewController {
     
     private func setUpProductImage() {
         view.addSubview(imageView)
-        imageView.image = UIImage(systemName: "house")
         imageView.contentMode = .scaleAspectFit
         
         if let url = product?.image {
