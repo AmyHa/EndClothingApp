@@ -124,7 +124,6 @@
 				898124DE97090828406008C7 /* Pods-EndClothingAppTests.debug.xcconfig */,
 				18EA61B1ED3E76547ED09AF2 /* Pods-EndClothingAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
