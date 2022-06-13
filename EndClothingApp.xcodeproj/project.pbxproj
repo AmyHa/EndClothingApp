@@ -26,6 +26,8 @@
 		62014B4228533E3C008B0ECE /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B4128533E3C008B0ECE /* ProductListViewController.swift */; };
 		62014B802855E00C008B0ECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62014B7F2855E00C008B0ECE /* LaunchScreen.storyboard */; };
 		62014B822855E6CB008B0ECE /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62014B812855E6CB008B0ECE /* ProductCollectionViewCell.swift */; };
+		62943AB928571D0A00531E26 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62943AB828571D0A00531E26 /* OpenSans-Regular.ttf */; };
+		62943ABB28571D1400531E26 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62943ABA28571D1400531E26 /* OpenSans-Bold.ttf */; };
 		DF0D7C9C3A47E626815B94D1 /* Pods_EndClothingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2904D21FD26C4EC9824F1AB0 /* Pods_EndClothingAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		62014B4128533E3C008B0ECE /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		62014B7F2855E00C008B0ECE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62014B812855E6CB008B0ECE /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		62943AB828571D0A00531E26 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		62943ABA28571D1400531E26 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		64DD9882C87C0F615C5A90A4 /* Pods-EndClothingApp-EndClothingAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndClothingApp-EndClothingAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-EndClothingApp-EndClothingAppUITests/Pods-EndClothingApp-EndClothingAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		898124DE97090828406008C7 /* Pods-EndClothingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndClothingAppTests.debug.xcconfig"; path = "Target Support Files/Pods-EndClothingAppTests/Pods-EndClothingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9A57E70C767256C6F202398D /* Pods-EndClothingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndClothingApp.release.xcconfig"; path = "Target Support Files/Pods-EndClothingApp/Pods-EndClothingApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 		62014AF72848ABCB008B0ECE /* EndClothingApp */ = {
 			isa = PBXGroup;
 			children = (
+				62943AB628571CB100531E26 /* Style */,
 				62014B4028533E04008B0ECE /* ViewControllers */,
 				62014B362848FCDF008B0ECE /* ViewModels */,
 				62014B312848C262008B0ECE /* Services */,
@@ -239,6 +244,23 @@
 				62014B812855E6CB008B0ECE /* ProductCollectionViewCell.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		62943AB628571CB100531E26 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				62943AB728571CFA00531E26 /* Fonts */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		62943AB728571CFA00531E26 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				62943AB828571D0A00531E26 /* OpenSans-Regular.ttf */,
+				62943ABA28571D1400531E26 /* OpenSans-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +374,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				62014B802855E00C008B0ECE /* LaunchScreen.storyboard in Resources */,
+				62943AB928571D0A00531E26 /* OpenSans-Regular.ttf in Resources */,
+				62943ABB28571D1400531E26 /* OpenSans-Bold.ttf in Resources */,
 				62014B022848ABCC008B0ECE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
