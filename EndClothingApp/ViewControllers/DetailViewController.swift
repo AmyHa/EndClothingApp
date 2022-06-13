@@ -33,11 +33,15 @@ class DetailViewController: UIViewController {
     }
     
     private func setUpUI() {
+        self.title = "\(product!.name)".uppercased()
         setUpAddToCartButton()
+        setUpColourLabel()
+        setUpPriceLabel()
     }
     
     private func setUpAddToCartButton() {
         addToCartButton.setTitle("ADD TO CART", for: .normal)
+        addToCartButton.titleLabelFont = UIFont(name: "OpenSans-Bold", size: 15)
         addToCartButton.setTitleColor(.white, for: .normal)
         addToCartButton.backgroundColor = .black
         view.addSubview(addToCartButton)
