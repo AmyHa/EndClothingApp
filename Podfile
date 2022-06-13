@@ -7,6 +7,7 @@ target 'EndClothingApp' do
 
   # Pods for EndClothingApp
   pod 'SDWebImage', '~> 5.0'
+  pod 'SnapKit', '~> 5.6.0'
 
   target 'EndClothingAppTests' do
     inherit! :search_paths
