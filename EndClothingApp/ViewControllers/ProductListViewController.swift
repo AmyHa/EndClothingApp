@@ -8,6 +8,7 @@
 import UIKit
 import Combine
 import SDWebImage
+import SnapKit
 
 class ProductListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
@@ -56,12 +57,11 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
         countLabel.textAlignment = .center
         
         view.addSubview(countLabel)
-        countLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            countLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            countLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            countLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
+        countLabel.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.left.equalTo(view)
+            make.right.equalTo(view)
+        }
     }
     
     private func setUpCollectionView() {
@@ -72,16 +72,16 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
         collectionView.register(ProductCollectionViewCell.self, forCellWithReuseIdentifier: ProductCollectionViewCell.identifier)
         collectionView.dataSource = self
         collectionView.delegate = self
+        
         view.addSubview(collectionView)
         collectionView.frame = view.bounds
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .white
-        NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: countLabel.bottomAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-        ])
+        collectionView.snp.makeConstraints { make in
+            make.top.equalTo(countLabel.snp.bottom)
+            make.bottom.equalTo(view.safeAreaLayoutGuide)
+            make.left.equalTo(view)
+            make.right.equalTo(view)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
