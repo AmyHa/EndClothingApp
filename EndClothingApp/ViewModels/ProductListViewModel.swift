@@ -17,7 +17,7 @@ class ProductListViewModel: ObservableObject {
     }
     
     func fetchProducts() {
-        service.fetchData(with: "https://www.endclothing.com/media/catalog/example.json") { [weak self] (result: Result<Products, Error>) in
+        service.fetchData(with: Constants.URL.baseURL) { [weak self] (result: Result<Products, Error>) in
             
             switch result {
             case .success(let successValue):

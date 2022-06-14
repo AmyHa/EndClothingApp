@@ -13,4 +13,8 @@ struct Constants {
         static let openSansBold = "OpenSans-Bold"
         static let openSansMedium = "OpenSans-Medium"
     }
+    
+    struct URL {
+        static let baseURL = "https://www.endclothing.com/media/catalog/example.json"
+    }
 }
