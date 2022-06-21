@@ -33,7 +33,9 @@ class DetailViewController: UIViewController {
     }
     
     private func setUpUI() {
-        self.title = "\(product?.name)".uppercased()
+        if let name = product?.name {
+            self.title = name.uppercased()
+        }
         setUpAddToCartButton()
         setUpColourLabel()
         setUpPriceLabel()
@@ -79,7 +81,7 @@ class DetailViewController: UIViewController {
     private func setUpProductImage() {
         view.addSubview(imageView)
         imageView.contentMode = .scaleAspectFit
-        
+
         if let url = product?.image, let imageURL = URL(string: url) {
             imageView.sd_setImage(with: imageURL) { image, error, cacheType, downloadURL in
                 if let error = error {
