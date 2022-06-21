@@ -33,7 +33,7 @@ class DetailViewController: UIViewController {
     }
     
     private func setUpUI() {
-        self.title = "\(product!.name)".uppercased()
+        self.title = "\(product?.name)".uppercased()
         setUpAddToCartButton()
         setUpColourLabel()
         setUpPriceLabel()

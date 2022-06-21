@@ -10,8 +10,8 @@ import XCTest
 
 class ProductListViewModelTests: XCTestCase {
 
-    var viewModel: ProductListViewModel!
-    var urlSession: URLSession!
+    var viewModel: ProductListViewModel?
+    var urlSession: URLSession?
     
     override func setUpWithError() throws {
         viewModel = ProductListViewModel()
