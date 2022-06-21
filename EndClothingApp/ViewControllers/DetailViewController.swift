@@ -80,9 +80,7 @@ class DetailViewController: UIViewController {
         view.addSubview(imageView)
         imageView.contentMode = .scaleAspectFit
         
-        if let url = product?.image {
-            let imageURL = URL(string: url)
-            
+        if let url = product?.image, let imageURL = URL(string: url) {
             imageView.sd_setImage(with: imageURL) { image, error, cacheType, downloadURL in
                 if let error = error {
                     print("Error downloading image: \(error)")
